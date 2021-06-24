@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img src="https://m.media-amazon.com/images/G/01/IMDb/BG_rectangle._CB1509060989_SY230_SX307_AL_.png" id="main-logo" alt="IMDB">
+    <form id="content">
+        <input type="text" name="input" class="input" id="search-input">
+        <button type="reset" class="search"  id="search-btn"></button>
+        <br>
+        <button id="final-submit" onclick="on(event)"> <p>submit</p></button>
+    </form>
+        
+
+
+    <div id="overlay" onclick="off()">
+  <div id="text">
+  
+    <div id="movie-bucket">
+        <div id="img-sec">
+            <img src="" alt="" id="movie-poster">
+        </div>
+        <div id="text-sec">
+            <br>
+
+            <p id="movie-name"></p>
+            <p id="movie-genre"></p>
+            <p id="movie-plot"></p>
+            <p id="movie-rating"></p>
+            <p id="movie-actors"></p>
+        </div>
+
+        <div id="movie-rec">
+            <p id="movie-passsss" >recomended</p>
+        </div>
+        
+    </div>
+  
+  </div>
+</div>
+
+
+</body>
+</html>
+
+<script src="main.js"></script>

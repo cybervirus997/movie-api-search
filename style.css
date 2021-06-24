@@ -1,0 +1,315 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ff9800;
+    color: #fff;
+    margin: 0;
+}
+
+#content {
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    margin-left: 170px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#content.on {
+    -webkit-animation-name: in-out;
+    animation-name: in-out;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+input {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Roboto;
+    outline: 0;
+    -webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
+        padding 0.2s;
+    transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
+        padding 0.2s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+}
+
+.search {
+    background: none;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 100%;
+    outline: 0;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+}
+
+.search:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: 26px;
+    margin-left: 17px;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.close {
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.close:before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 4px;
+    margin-top: -1px;
+    margin-left: -13px;
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.close:after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 4px;
+    background-color: #fff;
+    margin-top: -1px;
+    margin-left: -13px;
+    cursor: pointer;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.square {
+    box-sizing: border-box;
+    padding: 0 40px 0 10px;
+    width: 300px;
+    height: 50px;
+    border: 4px solid #ffffff;
+    border-radius: 0;
+    background: none;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    outline: 0;
+    -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
+        padding 0.2s;
+    transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
+        padding 0.2s;
+    -webkit-transition-delay: 0.4s, 0s, 0.4s;
+    transition-delay: 0.4s, 0s, 0.4s;
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+}
+/****************** bUtton *************************/
+
+#final-submit
+{
+    height:30px;
+    width: 180px;
+    border: transparent;
+    background-color:rgb(255, 255, 255);
+    cursor: pointer;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    -webkit-transform: translate(-90%, -40%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -30%);
+}
+#final-submit > *
+{
+    color: #ff9800;
+    font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:22px
+}
+/****************** bUtton *************************/
+
+/**************** overlay css *********************/
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#movie-bucket
+{
+    width:60vw;
+    height:60vh;
+    background-color: white;
+
+    display:flex;
+    flex-flow: row;
+}
+#img-sec
+{
+    width:38%
+}
+#img-sec > img 
+{
+    width:100%;
+    height:100%;
+}
+#text-sec
+{
+    width:58%
+}
+#text-sec
+{
+    text-align:center;
+}
+
+#movie-rec > p
+{
+    
+    font-size:22px;
+    margin-top:9.5px;
+    padding:3px;
+    padding-left:12px;
+    padding-right:12px;
+     position: absolute;
+     border: 1px solid black;
+     background-color: red;
+     -ms-transform: rotate(45deg);
+     /* IE 9 */
+     -ms-transform-origin: 20% 40%;
+     /* IE 9 */
+     transform: rotate(90deg);
+     transform-origin: 20% 40%;
+}
+
+#movie-name,
+#movie-plot,
+#movie-rating,
+#movie-actors,
+#movie-genre
+{
+    /* display:block; */
+    color: black;
+    font-size:20px;
+    margin-left: 10px;
+}
+
+#movie-name
+{
+    /* display:block; */
+    color: red;
+    padding: 2px;
+    font-size:30px;
+    font-weight: 700;
+}
+#movie-genre
+{
+    /* display:block; */
+    border: 2px solid orange;
+    background-color:orange;
+    font-size:20px;
+    font-weight: 700;
+    margin: 3%;
+    color: #fff;
+    border-radius:30% 30%;
+
+}
+#movie-genre:hover
+{
+    /* display:block; */
+    background-color:rgb(161, 112, 21);
+}
+#movie-plot
+{
+    /* display:block; */
+    margin: 3%;
+    font-size:17px;
+    font-weight: 400;
+}
+#movie-rating
+{
+    /* display:block; */
+    padding: 6px;
+    width:50%;
+    margin: 2% auto;
+    border: 2px solid red;
+}
+#movie-rating:hover
+{
+    /* display:block; */
+    background-color:red;
+    color: white;
+}
+#movie-actors
+{
+    /* display:block; */
+    text-decoration: dashed;
+}
+/**************** overlay css *********************/
+#main-logo
+{
+    width:100px;
+    height:50px;
+    margin-left: 1%;
+    margin-top:1%;
+}
